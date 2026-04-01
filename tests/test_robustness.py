@@ -7,7 +7,7 @@ from httplib2 import Response
 
 def _require_live_key():
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
-    if not gemini_key or gemini_key == "your_gemini_api_key_here":
+    if not gemini_key or gemini_key == "your-gemini-api-key":
         pytest.skip("GEMINI_API_KEY is not set or is a placeholder; skipping live Gemini robustness test.")
 
 
