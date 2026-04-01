@@ -7,8 +7,8 @@ from httplib2 import Response
 
 def _require_live_key():
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
-    if not gemini_key:
-        pytest.skip("GEMINI_API_KEY is not set; skipping live Gemini robustness test.")
+    if not gemini_key or gemini_key == "your_gemini_api_key_here":
+        pytest.skip("GEMINI_API_KEY is not set or is a placeholder; skipping live Gemini robustness test.")
 
 
 def test_calendar_conflict_prompts_for_new_time(mocker):
