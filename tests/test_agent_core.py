@@ -149,7 +149,7 @@ def test_agent_book_meeting_and_email_integration(mocker, attendee_email):
     assert attendee_email.lower() in (event_body["summary"] or "").lower()
     assert event_body["attendees"][0]["email"] == attendee_email
 
-    start_dt_actual = datetime.fromisoformat(event_body["start"]["dateTime"])
+    start_dt_actual = datetime.fromisoformat(event_body["start"]["dateTime"].replace("Z", "+00:00"))
     assert start_dt_actual.year == expected_dt.year
     assert start_dt_actual.month == expected_dt.month
     assert start_dt_actual.day == expected_dt.day
