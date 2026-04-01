@@ -67,7 +67,7 @@ test('submits a task and renders the clarification card for waiting runs', async
 
   await waitFor(() => expect(listRuns).toHaveBeenCalled())
 
-  await userEvent.click(screen.getByRole('button', { name: /run agent/i }))
+  await userEvent.click(screen.getByRole('button', { name: /send/i }))
 
   await waitFor(() =>
     expect(startRun).toHaveBeenCalledWith(
@@ -75,7 +75,7 @@ test('submits a task and renders the clarification card for waiting runs', async
     ),
   )
 
-  expect(await screen.findByText(/Human review needed/i)).toBeInTheDocument()
+  expect(await screen.findByText(/Input required/i)).toBeInTheDocument()
   expect(screen.getByText(/2 PM or 4 PM/i)).toBeInTheDocument()
 
   await userEvent.click(screen.getByRole('button', { name: '2 PM' }))
