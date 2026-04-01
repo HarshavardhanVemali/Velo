@@ -5,19 +5,32 @@
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" alt="PRs Welcome" />
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Uvicorn-499848?style=for-the-badge&logoColor=white" alt="Uvicorn" />
+  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=google-gemini&logoColor=white" alt="Gemini" />
+  <img src="https://img.shields.io/badge/Google_GenAI-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google GenAI" />
+  <img src="https://img.shields.io/badge/Calendar_/_Meet-34A853?style=for-the-badge&logo=google-calendar&logoColor=white" alt="Calendar / Meet" />
+  <img src="https://img.shields.io/badge/AWS_SES-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS SES" />
+</p>
+
 <h1 align="center">Velo</h1>
 
 <p align="center">
-  <strong>Autonomous AI meeting assistant — powered by Gemini function calling, Google Calendar, and AWS SES.</strong>
+  <strong>Autonomous AI meeting assistant - powered by Gemini function calling, Google Calendar, and AWS SES.</strong>
 </p>
 
 <p align="center">
-  Describe a task in natural language. Velo books the meeting, generates a Google Meet link, and sends a professional HTML email notification — all autonomously, with human-in-the-loop when it needs clarification.
+  Describe a task in natural language. Velo books the meeting, generates a Google Meet link, and sends a professional HTML email notification - all autonomously, with human-in-the-loop when it needs clarification.
 </p>
 
-<p align="center">
-  <img src="samples/screenshot-2026-04-01-at-11.40.25-pm.png" alt="Velo Dashboard Screenshot" width="800" />
-</p>
+
 <p align="center">
   <img src="samples/whatsapp-image-2026-04-01-at-23.39.41.jpeg" alt="Velo Demo 1" width="400" />
   <img src="samples/whatsapp-image-2026-04-01-at-23.39.42.jpeg" alt="Velo Demo 2" width="400" />
@@ -73,10 +86,10 @@
 
 ### How a Run Works
 
-1. **`POST /runs`** — User submits a natural-language prompt. If the prompt is ambiguous (missing email, multiple times), the run enters `waiting_for_user` status immediately.
-2. **Background execution** — A daemon thread calls `run_agent_session()`: Gemini analyzes the task, calls tools (Calendar → Email), and appends events to the run store.
-3. **Polling** — The dashboard polls `GET /runs/{id}/events?since=N` every 1.5s to render the live execution timeline.
-4. **Completion** — The run reaches `completed` or `failed` status. Artifacts (Meet link, message ID) are stored for review.
+1. **`POST /runs`** - User submits a natural-language prompt. If the prompt is ambiguous (missing email, multiple times), the run enters `waiting_for_user` status immediately.
+2. **Background execution** - A daemon thread calls `run_agent_session()`: Gemini analyzes the task, calls tools (Calendar → Email), and appends events to the run store.
+3. **Polling** - The dashboard polls `GET /runs/{id}/events?since=N` every 1.5s to render the live execution timeline.
+4. **Completion** - The run reaches `completed` or `failed` status. Artifacts (Meet link, message ID) are stored for review.
 
 
 
@@ -283,10 +296,10 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-- [Google Gemini](https://ai.google.dev/) — AI model powering the autonomous agent
-- [Google Calendar API](https://developers.google.com/calendar) — Event creation and Meet link generation
-- [AWS SES](https://aws.amazon.com/ses/) — Transactional email delivery
-- [FastAPI](https://fastapi.tiangolo.com/) — High-performance Python web framework
-- [React](https://react.dev/) + [Vite](https://vitejs.dev/) — Modern frontend tooling
-- [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS framework
+- [Google Gemini](https://ai.google.dev/) - AI model powering the autonomous agent
+- [Google Calendar API](https://developers.google.com/calendar) - Event creation and Meet link generation
+- [AWS SES](https://aws.amazon.com/ses/) - Transactional email delivery
+- [FastAPI](https://fastapi.tiangolo.com/) - High-performance Python web framework
+- [React](https://react.dev/) + [Vite](https://vitejs.dev/) - Modern frontend tooling
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 

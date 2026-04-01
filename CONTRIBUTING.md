@@ -102,9 +102,9 @@ Understanding the codebase will help you make effective contributions:
 
 ```
 src/
-├── agent_core.py          # Gemini agent loop — tool declarations, execution, multi-step reasoning
-├── calendar_manager.py    # Google Calendar + Meet integration — OAuth, event creation
-├── notification_manager.py # AWS SES email — HTML templates, multipart sending
+├── agent_core.py          # Gemini agent loop - tool declarations, execution, multi-step reasoning
+├── calendar_manager.py    # Google Calendar + Meet integration - OAuth, event creation
+├── notification_manager.py # AWS SES email - HTML templates, multipart sending
 ├── env.py                 # Environment loader (stable path resolution)
 ├── api/
 │   ├── main.py            # FastAPI app factory, CORS, router registration
